@@ -134,6 +134,18 @@ export const seoPages: SeoPage[] = [
     examples: ["“Help me scope my final-year project.”", "“My MATLAB simulation results look wrong.”", "“How should I structure my project report?”"],
     category: "projects",
   },
+  {
+    slug: "ece-project-help",
+    metaTitle: "ECE Project Help — Wireless, RF, 5G & Embedded",
+    metaDescription:
+      "ECE assignments and projects solved step by step: wireless communications, RF & microwave, 5G/LTE, antennas, DSP, VLSI, and embedded/IoT hardware projects. Hyderabad & online.",
+    eyebrow: "ECE & embedded",
+    h1: "ECE projects — wireless, RF, 5G and hardware, solved and explained",
+    intro: "From OFDM and MIMO simulations to patch antennas in HFSS and ESP32 hardware builds — we solve it step by step and walk you through every part.",
+    helpWith: ["Wireless communications (OFDM, MIMO, fading)", "RF & microwave, Smith chart, S-parameters", "5G / LTE system simulations", "Antenna design (HFSS, CST)", "DSP, VLSI & FPGA (Verilog/VHDL)", "Embedded & IoT hardware (Arduino, ESP32, STM32)"],
+    examples: ["“Simulate BER vs SNR for 16-QAM over a Rayleigh channel in MATLAB.”", "“Design a 2.4 GHz patch antenna and explain the S11 plot.”", "“Build an ESP32 IoT sensor node for my final-year project.”"],
+    category: "ece",
+  },
 ];
 
 export const getSeoPage = (slug: string) => seoPages.find((p) => p.slug === slug);

@@ -27,7 +27,7 @@ export default function HomePage() {
             description="From a single assignment to a final-year project — solved step by step and explained so you understand it."
           />
           <div className="mt-14">
-            <ServicesGrid limitItems={5} />
+            <ServicesGrid limitItems={5} limit={6} />
           </div>
           <div className="mt-8 text-center">
             <Link href="/services" className="inline-flex items-center gap-1 text-sm font-medium text-brand hover:underline">

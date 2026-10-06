@@ -30,6 +30,14 @@ export function Hero() {
           <p className="mt-3 max-w-lg text-base text-muted-foreground sm:text-lg">
             Upload your assignment or project, set your budget and deadline. We solve it step by step, deliver the complete solution with explanations, and walk you through every part.
           </p>
+          <p className="mt-4 flex flex-wrap items-center gap-1.5 text-sm">
+            <span className="font-medium">Including ECE:</span>
+            {["Wireless", "RF", "5G", "Embedded & hardware"].map((t) => (
+              <Link key={t} href="/ece-project-help" className="rounded-full border bg-background px-2.5 py-0.5 text-xs text-muted-foreground hover:border-brand/40 hover:text-foreground">
+                {t}
+              </Link>
+            ))}
+          </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Link href={routes.postProblem} className={buttonVariants({ size: "lg" })}>
               Send Your Assignment <ArrowRight />

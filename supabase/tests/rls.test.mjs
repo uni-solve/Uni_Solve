@@ -80,6 +80,18 @@ const p = preview[0].p;
 console.log("  ->", p.category_name, p.skills.map((s) => s.name).join(", "), JSON.stringify(p.estimate));
 check(p.category_slug === "ai-ml", "CNN/PyTorch request classified as AI/ML", p.category_slug);
 
+console.log("\n# ECE classification");
+for (const [text, wt] of [
+  ["5G NR massive MIMO beamforming simulation in MATLAB for my wireless communications project", "project"],
+  ["Design a microstrip patch antenna in HFSS at 2.4 GHz and plot S-parameters", "assignment"],
+  ["ESP32 IoT soil moisture sensor project with firmware and PCB", "hardware"],
+]) {
+  const r = (await as(null, () => q(`select preview_request($1, '', $2, 'this_week') as p`, [wt, text])))[0].p;
+  check(r.category_slug === "ece", `ECE detected: ${r.skills.map((s) => s.name).slice(0, 3).join(", ")}`, r.category_slug);
+}
+const plain = (await as(null, () => q(`select preview_request('assignment', '', 'I need to upload again the number of first questions for my program', 'none') as p`)))[0].p;
+check(plain.category_slug !== "ece", "everyday words don't trigger ECE", plain);
+
 console.log("\n# Requests & RLS");
 const created = await as(A, () => q(`select create_request('project', 'CNN image classifier', 'Need help with a CNN-based image classification project using PyTorch. Accuracy stuck at 50%.', 'this_week', null, 'custom', 4000, 4000, true, 'in_app') as r`));
 const R = created[0].r;

@@ -2,6 +2,7 @@ import {
   BookOpen,
   Briefcase,
   Code2,
+  Cpu,
   FileQuestion,
   FlaskConical,
   GraduationCap,
@@ -12,12 +13,13 @@ import {
 } from "lucide-react";
 
 export type WorkType =
-  | "assignment" | "coding" | "project" | "research" | "thesis" | "presentation" | "exam" | "career" | "other";
+  | "assignment" | "coding" | "project" | "hardware" | "research" | "thesis" | "presentation" | "exam" | "career" | "other";
 
 export const workTypes: { value: WorkType; label: string; hint: string; icon: LucideIcon }[] = [
   { value: "assignment", label: "Assignment", hint: "Understand or approach a task", icon: NotebookPen },
   { value: "coding", label: "Coding", hint: "Bugs, concepts, code reviews", icon: Code2 },
   { value: "project", label: "Project", hint: "Mini, major or final-year", icon: Layers },
+  { value: "hardware", label: "ECE / Hardware", hint: "Wireless, RF, 5G, embedded", icon: Cpu },
   { value: "research", label: "Research", hint: "Methods, analysis, papers", icon: FlaskConical },
   { value: "thesis", label: "Thesis", hint: "Topic to viva", icon: GraduationCap },
   { value: "presentation", label: "Presentation", hint: "Slides, delivery, viva", icon: Presentation },
@@ -31,6 +33,7 @@ export const categoryToWorkType: Record<string, WorkType> = {
   academic: "assignment",
   coding: "coding",
   projects: "project",
+  ece: "hardware",
   research: "research",
   thesis: "thesis",
   career: "career",

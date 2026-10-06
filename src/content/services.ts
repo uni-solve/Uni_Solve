@@ -1,5 +1,6 @@
 import {
   BookOpen,
+  Cpu,
   Briefcase,
   Code2,
   FlaskConical,
@@ -41,6 +42,24 @@ export const serviceCategories: ServiceCategory[] = [
       "Data Science",
       "Cloud",
       "Cybersecurity",
+    ],
+  },
+  {
+    slug: "ece",
+    title: "ECE & Embedded Projects",
+    summary: "Wireless, RF, 5G and hardware assignments and projects — simulated, built and explained.",
+    icon: Cpu,
+    items: [
+      "Wireless Communications",
+      "RF & Microwave",
+      "5G / LTE",
+      "Antenna design (HFSS, CST)",
+      "Signal processing (DSP)",
+      "Communication systems",
+      "VLSI & FPGA (Verilog, VHDL)",
+      "Embedded systems (Arduino, ESP32, STM32)",
+      "IoT & hardware projects",
+      "MATLAB / Simulink",
     ],
   },
   {

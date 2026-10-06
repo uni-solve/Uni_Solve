@@ -3,10 +3,10 @@ import { ArrowUpRight } from "lucide-react";
 import { Reveal } from "@/components/reveal";
 import { serviceCategories } from "@/content/services";
 
-export function ServicesGrid({ limitItems }: { limitItems?: number }) {
+export function ServicesGrid({ limitItems, limit }: { limitItems?: number; limit?: number }) {
   return (
     <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-      {serviceCategories.map((cat, i) => {
+      {serviceCategories.slice(0, limit).map((cat, i) => {
         const Icon = cat.icon;
         const items = limitItems ? cat.items.slice(0, limitItems) : cat.items;
         const more = cat.items.length - items.length;
