@@ -37,13 +37,17 @@ export function PayMilestoneDialog({
   const [error, setError] = useState<string>();
   const [busy, setBusy] = useState(false);
 
+  // Reset the form only when the dialog opens — not when settings arrive,
+  // which would wipe a UTR the student already typed.
+  useEffect(() => {
+    if (!open) return;
+    setUtr("");
+    setProof(null);
+    setError(undefined);
+  }, [open]);
+
   useEffect(() => {
     if (open && !settings) getPaymentSettings().then(setSettings).catch((e) => setError(friendlyError(e)));
-    if (open) {
-      setUtr("");
-      setProof(null);
-      setError(undefined);
-    }
   }, [open, settings]);
 
   if (!milestone) return null;

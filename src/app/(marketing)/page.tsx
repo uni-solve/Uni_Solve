@@ -8,6 +8,7 @@ import { LaunchBand } from "@/components/marketing/launch-band";
 import { PricingCards } from "@/components/marketing/pricing-cards";
 import { SectionHeading } from "@/components/marketing/section-heading";
 import { ServicesGrid } from "@/components/marketing/services-grid";
+import { Testimonials } from "@/components/marketing/testimonials";
 import { Trust } from "@/components/marketing/trust";
 import { pricingNote } from "@/content/pricing";
 
@@ -37,6 +38,7 @@ export default function HomePage() {
       </section>
 
       <Trust />
+      <Testimonials />
 
       <section className="py-20 sm:py-28">
         <div className="container-page">

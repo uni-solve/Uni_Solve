@@ -29,8 +29,9 @@ Because the site is a static export, all authorization is enforced in the databa
 ## Testing
 
 ```bash
-npm run test:db    # 60 RLS + workflow tests against PGlite (no Docker needed)
-npm run test:e2e   # browser journey against a local preview (see e2e/student-journey.mjs)
+npm run test:db         # 66 RLS + workflow tests against PGlite (no Docker needed)
+npm run test:e2e        # guest journey against a local preview (see e2e/student-journey.mjs)
+npm run test:e2e:full   # student + admin journey; needs ADMIN_EMAIL / ADMIN_PASSWORD env vars
 ```
 
 ## Database
