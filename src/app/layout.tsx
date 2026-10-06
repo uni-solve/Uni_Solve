@@ -34,9 +34,35 @@ export const viewport: Viewport = {
   ],
 };
 
+// Browser-enforced policy (GitHub Pages can't send security headers, so it is
+// delivered as a <meta> tag). Only this site and the Supabase project may be
+// contacted; plugins, foreign forms and <base> hijacking are blocked.
+const supabaseOrigin = process.env.NEXT_PUBLIC_SUPABASE_URL ? new URL(process.env.NEXT_PUBLIC_SUPABASE_URL).origin : "";
+const csp = [
+  "default-src 'self'",
+  "script-src 'self' 'unsafe-inline'",
+  "style-src 'self' 'unsafe-inline'",
+  `img-src 'self' data: blob: ${supabaseOrigin}`,
+  `connect-src 'self' ${supabaseOrigin} ${supabaseOrigin.replace("https://", "wss://")}`,
+  "font-src 'self'",
+  "object-src 'none'",
+  "base-uri 'self'",
+  "form-action 'self'",
+  "frame-src 'none'",
+  "upgrade-insecure-requests",
+].join("; ");
+
+// Anti-clickjacking: refuse to render inside another site's frame.
+const frameGuard = `if (window.top !== window.self) { document.documentElement.style.display = "none"; try { window.top.location = window.location.href; } catch (e) {} }`;
+
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" suppressHydrationWarning className={`${inter.variable} ${jetbrainsMono.variable}`}>
+      <head>
+        {process.env.NODE_ENV === "production" && <meta httpEquiv="Content-Security-Policy" content={csp} />}
+        <meta name="referrer" content="strict-origin-when-cross-origin" />
+        <script dangerouslySetInnerHTML={{ __html: frameGuard }} />
+      </head>
       <body>
         <a
           href="#main"
