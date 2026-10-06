@@ -5,7 +5,8 @@ export const siteConfig = {
     "Private, expert support for students — academics, coding, projects, research, thesis preparation and career readiness.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
   locale: "en_IN",
-  supportEmail: "support@unisolve.in",
+  // Left blank until an official support address exists; UI hides empty contact fields.
+  supportEmail: "",
   social: {
     instagram: "https://instagram.com/",
     linkedin: "https://linkedin.com/",
