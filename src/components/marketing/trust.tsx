@@ -7,9 +7,9 @@ const pillars = [
   { icon: Lock, title: "Private by Design", body: "Your requests and files are handled privately — stored in private storage, seen only by the team handling your request." },
   { icon: BadgeCheck, title: "Handled Personally", body: "Your request is handled directly by the UniSolve team — never passed on to strangers." },
   { icon: CreditCard, title: "Secure Payments", body: "Pay by UPI — 50% to start, 50% on delivery. Every payment is verified by our team." },
-  { icon: Activity, title: "Transparent Progress", body: "Track your request from submission to completion with a clear timeline." },
+  { icon: Activity, title: "Transparent Progress", body: "Track every assignment from upload to delivery. No hidden charges — ever." },
   { icon: LifeBuoy, title: "Human Support", body: "Raise a ticket or report an issue from any request when something goes wrong." },
-  { icon: ReceiptText, title: "No Hidden Charges", body: "You see the full price before you pay. Nothing is added later." },
+  { icon: ReceiptText, title: "Explained, Not Just Answered", body: "Every solution comes with step-by-step explanations and a walkthrough." },
 ];
 
 export function Trust() {

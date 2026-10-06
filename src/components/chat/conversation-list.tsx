@@ -13,7 +13,7 @@ export function ConversationList({ basePath }: { basePath: string }) {
   if (loading) return <ListSkeleton />;
   if (error) return <ErrorState message={error} onRetry={reload} />;
   if (!data?.length)
-    return <EmptyState icon={MessageSquare} title="No conversations yet" description="Your private conversations with UniSolve appear here." action={<Link href="/post" className={buttonVariants({ variant: "outline" })}>Post Your Problem</Link>} />;
+    return <EmptyState icon={MessageSquare} title="No conversations yet" description="Your private conversations with UniSolve appear here." action={<Link href="/post" className={buttonVariants({ variant: "outline" })}>Get It Solved</Link>} />;
   return (
     <ul className="divide-y rounded-2xl border bg-card">
       {data.map((c) => (

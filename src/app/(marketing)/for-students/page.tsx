@@ -27,8 +27,8 @@ export default function ForStudentsPage() {
         <SectionHeading
           as="h1"
           eyebrow="For students"
-          title="Help that respects your privacy and your learning"
-          description="Whether it's a bug at midnight or a thesis chapter, describe the problem once — we take it from there."
+          title="Your assignment, solved — and explained"
+          description="From a lab program due tonight to a final-year project — send it once, and we take it from there."
         />
         <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {features.map(({ icon: Icon, title, body }) => (

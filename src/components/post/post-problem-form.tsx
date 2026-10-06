@@ -211,8 +211,8 @@ export function PostProblemForm() {
     <form onSubmit={submit} noValidate className="grid gap-10 lg:grid-cols-[1fr_340px]">
       <div className="grid min-w-0 gap-8">
         <div>
-          <h1 className="text-3xl font-semibold sm:text-4xl">Post your problem</h1>
-          <p className="mt-2 text-muted-foreground">Describe it, attach your files, tell us your budget and deadline. We&apos;ll reply in your dashboard.</p>
+          <h1 className="text-3xl font-semibold sm:text-4xl">Send your assignment</h1>
+          <p className="mt-2 text-muted-foreground">Attach your files, tell us what&apos;s needed, your budget and deadline. We&apos;ll reply with a price in your dashboard.</p>
         </div>
 
         {!isSupabaseConfigured && (
@@ -232,14 +232,14 @@ export function PostProblemForm() {
         </fieldset>
 
         <div className="grid gap-5">
-          <FormField id="description" label="What do you need help with?" error={errors.description} hint={<span className="flex justify-between gap-4"><span>Include the subject, tools or language, and what you&apos;ve tried.</span><span className="shrink-0">{draft.description.length}/8000</span></span>}>
+          <FormField id="description" label="What needs to be solved?" error={errors.description} hint={<span className="flex justify-between gap-4"><span>Mention the subject, which questions or parts, and any format your college wants.</span><span className="shrink-0">{draft.description.length}/8000</span></span>}>
             {(aria) => (
               <Textarea
                 {...aria}
                 rows={7}
                 value={draft.description}
                 onChange={(e) => set("description", e.target.value)}
-                placeholder="Tell us what you're trying to do, what you've tried already, and where you're stuck."
+                placeholder="e.g. Solve questions 1–6 of the attached DBMS assignment with explanations. Due Friday."
                 className="min-h-40"
               />
             )}
@@ -307,7 +307,7 @@ export function PostProblemForm() {
             <Checkbox checked={agreed} onCheckedChange={(v) => { setAgreed(Boolean(v)); setErrors((e) => ({ ...e, agree: undefined })); }} className="mt-0.5" aria-invalid={errors.agree ? true : undefined} />
             <span>
               I&apos;ve read the{" "}
-              <Link href="/legal/academic-integrity" target="_blank" className="text-foreground underline underline-offset-2">Academic Integrity Policy</Link>{" "}
+              <Link href="/legal/academic-integrity" target="_blank" className="text-foreground underline underline-offset-2">Academic Responsibility Policy</Link>{" "}
               and{" "}
               <Link href="/legal/terms-of-service" target="_blank" className="text-foreground underline underline-offset-2">Terms</Link>.
             </span>

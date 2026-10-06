@@ -25,7 +25,7 @@ export default function StudentOverviewPage() {
         description="Here's what's happening with your requests."
         actions={
           <Link href="/post" className={buttonVariants()}>
-            <Plus /> Post Your Problem
+            <Plus /> Get It Solved
           </Link>
         }
       />
@@ -56,7 +56,7 @@ export default function StudentOverviewPage() {
             icon={Inbox}
             title="No active requests"
             description="Stuck on something? Describe it and we'll take it from there."
-            action={<Link href="/post" className={buttonVariants()}>Post Your Problem</Link>}
+            action={<Link href="/post" className={buttonVariants()}>Get It Solved</Link>}
           />
         ) : (
           <div className="grid gap-3">

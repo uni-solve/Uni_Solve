@@ -109,7 +109,7 @@ export function SignupForm() {
                   I agree to the{" "}
                   <Link href="/legal/terms-of-service" className="text-foreground underline underline-offset-2">Terms</Link>,{" "}
                   <Link href="/legal/privacy-policy" className="text-foreground underline underline-offset-2">Privacy Policy</Link> and{" "}
-                  <Link href="/legal/academic-integrity" className="text-foreground underline underline-offset-2">Academic Integrity Policy</Link>.
+                  <Link href="/legal/academic-integrity" className="text-foreground underline underline-offset-2">Academic Responsibility Policy</Link>.
                 </span>
               </label>
               {fieldState.error && <p role="alert" className="mt-1.5 text-sm text-destructive">{fieldState.error.message}</p>}

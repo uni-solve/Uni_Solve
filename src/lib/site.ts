@@ -2,7 +2,7 @@ export const siteConfig = {
   name: "UniSolve",
   tagline: "Your Problem. Our Expertise.",
   description:
-    "Private, expert support for students — academics, coding, projects, research, thesis preparation and career readiness.",
+    "Send your assignment or project — get it solved step by step, with explanations and a walkthrough so you learn how.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
   locale: "en_IN",
   // Left blank until an official support address exists; UI hides empty contact fields.
@@ -58,7 +58,7 @@ export const footerNav = [
     links: [
       { label: "Privacy", href: "/legal/privacy-policy" },
       { label: "Terms", href: "/legal/terms-of-service" },
-      { label: "Academic Integrity", href: "/legal/academic-integrity" },
+      { label: "Academic Responsibility", href: "/legal/academic-integrity" },
       { label: "Student Guidelines", href: "/legal/student-guidelines" },
     ],
   },

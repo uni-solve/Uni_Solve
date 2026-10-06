@@ -53,7 +53,7 @@ export default function MyRequestsPage() {
       ) : error ? (
         <ErrorState message={error} onRetry={reload} />
       ) : rows.length === 0 ? (
-        <EmptyState icon={Inbox} title={filter === "active" ? "No active requests" : "Nothing here yet"} action={<Link href="/post" className={buttonVariants({ variant: "outline" })}>Post Your Problem</Link>} />
+        <EmptyState icon={Inbox} title={filter === "active" ? "No active requests" : "Nothing here yet"} action={<Link href="/post" className={buttonVariants({ variant: "outline" })}>Get It Solved</Link>} />
       ) : (
         <div className="grid gap-3">
           {rows.map((r) => (

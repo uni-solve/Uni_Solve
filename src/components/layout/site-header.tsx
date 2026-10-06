@@ -57,7 +57,7 @@ export function SiteHeader() {
             {account.label}
           </Link>
           <Link href={routes.postProblem} className={cn(buttonVariants(), "hidden sm:inline-flex")}>
-            Post Your Problem
+            Get It Solved
           </Link>
 
           <Sheet open={open} onOpenChange={setOpen}>
@@ -84,7 +84,7 @@ export function SiteHeader() {
                   {account.label}
                 </Link>
                 <Link href={routes.postProblem} onClick={() => setOpen(false)} className={buttonVariants({ size: "lg" })}>
-                  Post Your Problem
+                  Get It Solved
                 </Link>
               </div>
             </SheetContent>

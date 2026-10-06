@@ -19,7 +19,7 @@ export function LaunchBand() {
           <div>
             <p className="text-lg font-semibold">Launching in Hyderabad</p>
             <p className="text-sm text-muted-foreground">
-              Join the early student community — and help shape how UniSolve works.
+              Send your first assignment and see how it works — you only pay 50% to start.
             </p>
           </div>
         </div>
@@ -28,7 +28,7 @@ export function LaunchBand() {
             Join as a student
           </Link>
           <Link href={routes.postProblem} className={buttonVariants({ variant: "outline" })}>
-            Post Your Problem
+            Get It Solved
           </Link>
         </div>
       </div>

@@ -64,9 +64,9 @@ export function HeroVisual() {
             </ol>
             <div className="mt-4 grid grid-cols-2 gap-2 border-t pt-3 text-xs">
               <div>
-                <p className="text-muted-foreground">Milestone 2 of 3</p>
+                <p className="text-muted-foreground">Advance paid · 50%</p>
                 <div className="mt-1.5 h-1.5 rounded-full bg-muted">
-                  <div className="h-full w-2/3 rounded-full bg-brand" />
+                  <div className="h-full w-1/2 rounded-full bg-brand" />
                 </div>
               </div>
               <div className="text-right">

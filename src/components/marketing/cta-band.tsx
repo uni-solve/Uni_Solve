@@ -5,8 +5,8 @@ import { routes } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
 export function CtaBand({
-  title = "Stuck on something? Let's solve it.",
-  body = "Describe your problem in a few sentences. It takes less than two minutes.",
+  title = "Got an assignment due? Send it to us.",
+  body = "Upload it in under two minutes. We'll reply with a price in your dashboard.",
 }: {
   title?: string;
   body?: string;
@@ -19,7 +19,7 @@ export function CtaBand({
           <p className="mx-auto mt-3 max-w-xl text-muted-foreground">{body}</p>
           <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
             <Link href={routes.postProblem} className={buttonVariants({ size: "lg" })}>
-              Post Your Problem <ArrowRight />
+              Get It Solved <ArrowRight />
             </Link>
             <Link href="/pricing" className={cn(buttonVariants({ size: "lg", variant: "outline" }), "bg-background")}>
               See pricing

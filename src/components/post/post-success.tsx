@@ -37,8 +37,8 @@ function CopyButton({ value, label }: { value: string; label: string }) {
 const nextSteps = [
   "We review your request and accept your amount or send a quote.",
   "You pay 50% by UPI to get started.",
-  "We work on it and keep you updated in your private chat.",
-  "You pay the remaining 50% on delivery and mark it complete.",
+  "We solve it step by step and keep you updated in your private chat.",
+  "You get the full solution with explanations, pay the remaining 50%, and we walk you through it.",
 ];
 
 export function PostSuccess({ request, uploads }: { request: CreatedRequest; uploads: { ok: number; failed: string[] } }) {

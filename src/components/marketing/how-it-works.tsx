@@ -2,10 +2,10 @@ import { Reveal } from "@/components/reveal";
 import { SectionHeading } from "./section-heading";
 
 const steps = [
-  { n: "01", title: "Tell Us", body: "Describe what you're working on and where you're stuck." },
+  { n: "01", title: "Upload", body: "Send your assignment or project files, your budget and deadline." },
   { n: "02", title: "Get a Price", body: "Tell us your budget — we accept it or send a fair quote." },
-  { n: "03", title: "Work Together", body: "Pay 50% to start, chat privately, share files and track progress." },
-  { n: "04", title: "Solve It", body: "Receive guidance, technical support, revisions and preparation." },
+  { n: "03", title: "We Solve It", body: "Pay 50% to start. We solve it step by step and keep you posted in chat." },
+  { n: "04", title: "Learn It", body: "Get the full solution with explanations, plus a walkthrough of every step." },
 ];
 
 export function HowItWorks() {
@@ -14,8 +14,8 @@ export function HowItWorks() {
       <div className="container-page">
         <SectionHeading
           eyebrow="How it works"
-          title="From stuck to solved in four steps"
-          description="You don't need to know which service you need. Describe the problem — we'll route it."
+          title="From assignment to understood in four steps"
+          description="No forms to figure out. Send it, set your price, and we take it from there."
         />
         <ol className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {steps.map((step, i) => (

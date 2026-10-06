@@ -98,7 +98,7 @@ export function AppShell({
           </Link>
           {showPostButton && (
             <Link href="/post" className={buttonVariants({ className: "w-full" })}>
-              <Plus /> Post Your Problem
+              <Plus /> Get It Solved
             </Link>
           )}
           <div className="flex-1 overflow-y-auto">

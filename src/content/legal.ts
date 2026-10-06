@@ -11,43 +11,38 @@ const UPDATED = "6 October 2026";
 export const legalDocs: LegalDoc[] = [
   {
     slug: "academic-integrity",
-    title: "Academic Integrity Policy",
-    summary: "UniSolve exists to help students learn and solve problems — never to help them cheat.",
+    title: "Academic Responsibility Policy",
+    summary: "What UniSolve provides — and what students remain responsible for.",
     updated: UPDATED,
     sections: [
       {
-        heading: "Our position",
+        heading: "What we provide",
         body: [
-          "UniSolve is a platform for legitimate learning, mentoring, tutoring, technical assistance and academic support. We help you understand, plan, debug, review and prepare. The work you submit for assessment must be your own.",
-          "Students are responsible for following the academic rules of their institution. If your institution restricts outside help for a specific task, you must not request it on UniSolve.",
+          "UniSolve solves assignments, coding problems and projects step by step, and delivers them with explanations and a walkthrough so you understand how each part was done.",
+          "Our solutions are meant to help you learn the material and be able to explain the work yourself.",
         ],
       },
       {
-        heading: "Strictly prohibited",
+        heading: "Your responsibility",
         body: [
-          "Plagiarism, or requesting work intended to be submitted as your own.",
-          "Fabricated research results, invented data or manipulated experiments.",
-          "Fake, fabricated or misleading citations.",
-          "Impersonation of a student in any class, exam, interview, viva or assessment.",
-          "Assistance during live exams, tests or proctored assessments.",
-          "Sharing, requesting or using another person's login credentials (credential theft).",
-          "Submission of another person's work as one's own.",
+          "You are responsible for how you use our solutions and for following the academic rules of your college or university.",
+          "If your institution restricts outside help for a specific task, it is your responsibility not to use our service for it.",
         ],
       },
       {
-        heading: "What we do",
+        heading: "What we never do",
         body: [
-          "Explain concepts, walk through worked examples and recommend learning resources.",
-          "Review your code, writing or methodology and give feedback you then apply yourself.",
-          "Help you debug, design an architecture, plan milestones or prepare for a presentation or viva.",
-          "Proofread for language and formatting while preserving your own ideas and authorship.",
+          "Sit exams, tests, quizzes or interviews on anyone's behalf, or help during a live or proctored exam.",
+          "Log in to a student's college, LMS or exam accounts, or ask for their credentials.",
+          "Fabricate research data, experimental results or citations.",
+          "Copy existing work or other students' submissions into a solution.",
         ],
       },
       {
         heading: "Enforcement",
         body: [
-          "Requests that breach this policy are declined. Accounts that repeatedly or seriously breach it are suspended or removed, and payments for prohibited work are not processed.",
-          "Report a suspected breach from any request using “Report Issue”, or through the Help Center.",
+          "Requests for any of the above are declined, and accounts that repeatedly ask for them are suspended.",
+          "Report a concern from any request using “Report Issue”, or through the Help Center.",
         ],
       },
     ],
@@ -114,7 +109,7 @@ export const legalDocs: LegalDoc[] = [
       {
         heading: "The service",
         body: [
-          "UniSolve provides learning, mentoring and technical support to students. Requests are handled by the UniSolve team through the platform's private chat.",
+          "UniSolve provides step-by-step solutions, explanations and walkthroughs to students. Requests are handled by the UniSolve team through the platform's private chat.",
         ],
       },
       {
@@ -126,7 +121,7 @@ export const legalDocs: LegalDoc[] = [
       {
         heading: "Acceptable use",
         body: [
-          "You agree to follow the Academic Integrity Policy and Student Guidelines. You must not upload unlawful content, malware, or material you have no right to share, or attempt to move payments or communication off the platform to avoid its protections.",
+          "You agree to follow the Academic Responsibility Policy and Student Guidelines. You must not upload unlawful content, malware, or material you have no right to share, or attempt to move payments or communication off the platform to avoid its protections.",
         ],
       },
       {
@@ -142,7 +137,7 @@ export const legalDocs: LegalDoc[] = [
       {
         heading: "Limitation of liability",
         body: [
-          "Our support is guidance. Outcomes such as grades, publication or hiring decisions depend on many factors outside our control and are not guaranteed. To the extent permitted by law, UniSolve's liability is limited to the amount you paid for the affected request.",
+          "Outcomes such as grades, publication or hiring decisions depend on many factors outside our control and are not guaranteed. To the extent permitted by law, UniSolve's liability is limited to the amount you paid for the affected request.",
         ],
       },
       {
@@ -174,7 +169,7 @@ export const legalDocs: LegalDoc[] = [
       },
       {
         heading: "Not eligible",
-        body: ["Requests cancelled because they breach the Academic Integrity Policy are not eligible for refunds of work already delivered."],
+        body: ["Requests cancelled because they breach the Academic Responsibility Policy are not eligible for refunds of work already delivered."],
       },
       {
         heading: "How refunds are paid",
@@ -203,9 +198,9 @@ export const legalDocs: LegalDoc[] = [
         ],
       },
       {
-        heading: "Use help to learn",
+        heading: "Learn from your solution",
         body: [
-          "Use explanations, reviews and feedback to improve your own work. Do not ask us to produce work you will submit as your own, or to help during an exam.",
+          "Go through the explanations and the walkthrough so you understand the work and can explain it. We never help during an exam.",
         ],
       },
       {

@@ -40,7 +40,7 @@ export default async function SeoLandingPage({ params }: { params: Promise<{ slu
           <h1 className="mt-3 max-w-3xl text-4xl font-semibold sm:text-5xl">{page.h1}</h1>
           <p className="mt-5 max-w-2xl text-lg text-muted-foreground">{page.intro}</p>
           <Link href={`${routes.postProblem}?category=${page.category}`} className={`${buttonVariants({ size: "lg" })} mt-8`}>
-            Post Your Problem <ArrowRight />
+            Get It Solved <ArrowRight />
           </Link>
         </div>
       </section>
@@ -77,11 +77,11 @@ export default async function SeoLandingPage({ params }: { params: Promise<{ slu
       <section className="pb-16">
         <div className="container-page">
           <p className="text-sm text-muted-foreground">
-            All support follows our{" "}
+            Every solution comes with explanations and a walkthrough. Students are responsible for following their college&apos;s rules — see our{" "}
             <Link href="/legal/academic-integrity" className="text-foreground underline underline-offset-2">
-              Academic Integrity Policy
+              Academic Responsibility Policy
             </Link>
-            : we help you learn and solve problems — the work you submit stays your own.
+            .
           </p>
           <h2 className="mt-10 text-lg font-semibold">Related help</h2>
           <ul className="mt-4 flex flex-wrap gap-2">

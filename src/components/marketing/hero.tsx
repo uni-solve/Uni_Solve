@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, CreditCard, Lock, UserCheck, Zap } from "lucide-react";
+import { ArrowRight, CreditCard, GraduationCap, ListChecks, Lock } from "lucide-react";
 import { buttonVariants } from "@/components/ui/button";
 import { routes } from "@/lib/site";
 import { cn } from "@/lib/utils";
@@ -7,9 +7,9 @@ import { HeroVisual } from "./hero-visual";
 
 const assurances = [
   { icon: Lock, label: "Private & Confidential" },
-  { icon: Zap, label: "Fast Response" },
-  { icon: UserCheck, label: "Expert Support" },
-  { icon: CreditCard, label: "Secure Payments" },
+  { icon: ListChecks, label: "Step-by-step Solutions" },
+  { icon: GraduationCap, label: "We Teach You How" },
+  { icon: CreditCard, label: "Pay 50% to Start" },
 ];
 
 export function Hero() {
@@ -23,16 +23,16 @@ export function Hero() {
             Now launching in Hyderabad
           </p>
           <h1 className="mt-6 text-[2.6rem] leading-[1.05] font-semibold sm:text-6xl">
-            Stuck on something?
-            <span className="block text-muted-foreground">Let&apos;s solve it.</span>
+            Send us your assignment.
+            <span className="block text-muted-foreground">Get it solved — and learn how.</span>
           </h1>
           <p className="mt-5 text-lg font-medium text-brand">Your Problem. Our Expertise.</p>
           <p className="mt-3 max-w-lg text-base text-muted-foreground sm:text-lg">
-            Get private, expert support for academics, coding, projects, research and career preparation.
+            Upload your assignment or project, set your budget and deadline. We solve it step by step, deliver the complete solution with explanations, and walk you through every part.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Link href={routes.postProblem} className={buttonVariants({ size: "lg" })}>
-              Post Your Problem <ArrowRight />
+              Send Your Assignment <ArrowRight />
             </Link>
             <Link href="/services" className={cn(buttonVariants({ size: "lg", variant: "outline" }))}>
               Explore Services

@@ -1,11 +1,15 @@
 export const faqs = [
   {
     q: "What kind of help can I get on UniSolve?",
-    a: "Tutoring, concept explanations, coding and debugging help, project mentorship, research and thesis guidance, proofreading, documentation and presentation support, viva preparation, and career preparation. You don't need to know which service you need — just describe your problem.",
+    a: "Assignments, coding problems, projects, research and thesis work, presentations and career preparation. Upload what you're working on — you don't need to know which service you need.",
   },
   {
-    q: "Will you do my assignment or thesis for me?",
-    a: "No. UniSolve is a learning and support service. We guide, explain, review and help you debug — the work you submit must be your own. We prohibit plagiarism, fabricated results, fake citations, impersonation and exam cheating. See our Academic Integrity Policy.",
+    q: "What exactly do I get?",
+    a: "A complete, step-by-step solution to your assignment or project, with explanations for each step — plus a walkthrough in your private chat so you understand how it was solved and can explain it yourself.",
+  },
+  {
+    q: "Do I still need to follow my college's rules?",
+    a: "Yes. You're responsible for how you use our solutions under your institution's academic rules. We never sit exams or live tests for anyone. See our Academic Responsibility Policy.",
   },
   {
     q: "Do I have to share my name or college?",

@@ -3,8 +3,8 @@ import { Suspense } from "react";
 import { PostProblemForm } from "@/components/post/post-problem-form";
 
 export const metadata: Metadata = {
-  title: "Post Your Problem",
-  description: "Describe what you're stuck on. UniSolve recommends the right support with an estimated price and timeline.",
+  title: "Send Your Assignment",
+  description: "Upload your assignment or project with your budget and deadline. We solve it step by step and teach you how.",
   alternates: { canonical: "/post/" },
 };
 

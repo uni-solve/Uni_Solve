@@ -14,7 +14,7 @@ export default function NotFound() {
           Go home
         </Link>
         <Link href="/post" className={buttonVariants()}>
-          Post Your Problem
+          Get It Solved
         </Link>
       </div>
     </main>

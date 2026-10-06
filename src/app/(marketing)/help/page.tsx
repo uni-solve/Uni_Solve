@@ -57,7 +57,7 @@ export default function HelpPage() {
             <p className="mt-2 text-muted-foreground">
               To report a problem with a specific request — including suspected breaches of our{" "}
               <Link href="/legal/academic-integrity" className="text-foreground underline underline-offset-2">
-                Academic Integrity Policy
+                Academic Responsibility Policy
               </Link>{" "}
               — open the request and choose <strong>Report Issue</strong>. For anything else, raise a ticket above.
             </p>

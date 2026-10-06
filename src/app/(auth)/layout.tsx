@@ -26,10 +26,10 @@ export default function AuthLayout({ children }: { children: React.ReactNode }) 
       <aside className="relative hidden overflow-hidden bg-navy text-navy-foreground lg:flex lg:flex-col lg:justify-end lg:p-14 dark:bg-card">
         <div className="bg-grid absolute inset-0 opacity-20" aria-hidden />
         <div className="relative max-w-md">
-          <p className="text-4xl leading-tight font-semibold">Stuck on something?</p>
-          <p className="mt-2 text-4xl leading-tight font-semibold text-brand">Let&apos;s solve it.</p>
+          <p className="text-4xl leading-tight font-semibold">Send it. We solve it.</p>
+          <p className="mt-2 text-4xl leading-tight font-semibold text-brand">You learn it.</p>
           <p className="mt-6 text-navy-foreground/70">
-            Private, expert support for academics, coding, projects, research and career preparation.
+            Assignments and projects solved step by step — with explanations and a walkthrough.
           </p>
         </div>
       </aside>

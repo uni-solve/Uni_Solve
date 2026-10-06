@@ -24,7 +24,7 @@ export default function HomePage() {
           <SectionHeading
             eyebrow="Services"
             title="One platform. Every student problem."
-            description="From a confusing line of code to a complex research project, UniSolve connects you with the right support."
+            description="From a single assignment to a final-year project — solved step by step and explained so you understand it."
           />
           <div className="mt-14">
             <ServicesGrid limitItems={5} />

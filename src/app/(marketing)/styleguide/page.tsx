@@ -82,7 +82,7 @@ export default function StyleguidePage() {
       <Section title="Buttons">
         <div className="flex flex-wrap items-center gap-3">
           <Button size="lg">
-            Post Your Problem <ArrowRight />
+            Get It Solved <ArrowRight />
           </Button>
           <Button size="lg" variant="outline">
             Explore Services

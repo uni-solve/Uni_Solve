@@ -16,8 +16,7 @@ export function SiteFooter() {
           <Logo />
           <p className="max-w-xs text-sm text-muted-foreground">{siteConfig.tagline}</p>
           <p className="max-w-xs text-xs text-muted-foreground">
-            Legitimate learning, mentoring and technical support. We do not offer services that violate academic
-            integrity.{" "}
+            Complete solutions, explained step by step. Students are responsible for following their college&apos;s rules.{" "}
             <Link href="/legal/academic-integrity" className="underline underline-offset-2 hover:text-foreground">
               Read our policy
             </Link>

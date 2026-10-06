@@ -17,9 +17,9 @@ export const seoPages: SeoPage[] = [
     metaDescription:
       "Private tutoring, concept explanations and assignment guidance. Post your problem and get personal help from the UniSolve team.",
     eyebrow: "Academic help",
-    h1: "Academic help that helps you actually understand",
+    h1: "Assignment help — solved step by step",
     intro:
-      "Stuck on a concept, a problem set or exam prep? Get one-on-one guidance that explains it until it clicks.",
+      "Send your assignment or problem set and get every question solved with clear, step-by-step explanations.",
     helpWith: ["Concept explanations", "Assignment guidance", "Problem-solving walkthroughs", "Exam preparation", "Tutoring sessions"],
     examples: ["“I don't understand Laplace transforms.”", "“Can someone explain normalization in DBMS?”", "“I need a study plan for my semester exams.”"],
     category: "academic",
@@ -30,9 +30,9 @@ export const seoPages: SeoPage[] = [
     metaDescription:
       "Get mentorship for your college project — ideation, architecture, development guidance, debugging, testing and presentation prep. Launching in Hyderabad.",
     eyebrow: "Project help",
-    h1: "Project mentorship from idea to demo day",
+    h1: "Project development, built and explained",
     intro:
-      "Plan the architecture, unblock development, fix bugs and prepare your presentation with an experienced mentor beside you.",
+      "We build your project end to end, then walk you through the code and architecture so you can present it with confidence.",
     helpWith: ["Project ideation", "Architecture & tech stack", "Development guidance", "Debugging", "Testing", "Documentation & presentation"],
     examples: ["“How should I structure my MERN app?”", "“My IoT sensor readings are wrong.”", "“Help me prepare my final review presentation.”"],
     category: "projects",
@@ -43,8 +43,8 @@ export const seoPages: SeoPage[] = [
     metaDescription:
       "Coding help for students from experienced engineers. Learn, debug and build in Python, Java, C/C++, JavaScript, React, SQL and more.",
     eyebrow: "Coding help",
-    h1: "Coding help from engineers who write code every day",
-    intro: "From your first program to a full-stack app — get explanations, code reviews and debugging help in your language.",
+    h1: "Coding solutions, explained line by line",
+    intro: "Lab programs, assignments and apps — working code in your language, with a walkthrough of how it works.",
     helpWith: ["Python", "Java", "C/C++", "JavaScript & React", "SQL", "MATLAB", "Data structures & algorithms"],
     examples: ["“My recursion keeps overflowing the stack.”", "“Why does my React state not update?”", "“Explain this SQL join to me.”"],
     category: "coding",

@@ -13,7 +13,7 @@ const items = [
   { label: "Profile", href: routes.profile, icon: User },
 ];
 
-/** Phone-only bottom navigation with a raised "Post Your Problem" action in the middle. */
+/** Phone-only bottom navigation with a raised "Get It Solved" action in the middle. */
 export function MobileBottomNav() {
   const pathname = usePathname();
   const isActive = (href: string) =>
@@ -46,7 +46,7 @@ export function MobileBottomNav() {
         <div className="flex flex-1 justify-center">
           <Link
             href={routes.postProblem}
-            aria-label="Post Your Problem"
+            aria-label="Get It Solved"
             className="-mt-5 flex size-14 items-center justify-center rounded-2xl bg-primary text-primary-foreground shadow-lg shadow-primary/30 ring-4 ring-background transition-transform active:scale-95"
           >
             <Plus className="size-6" aria-hidden />
