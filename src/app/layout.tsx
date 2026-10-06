@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
 import { ThemeProvider } from "@/components/theme/theme-provider";
+import { AuthProvider } from "@/lib/auth/auth-provider";
 import { Toaster } from "@/components/ui/sonner";
 import { siteConfig } from "@/lib/site";
 import "./globals.css";
@@ -44,8 +45,10 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           Skip to content
         </a>
         <ThemeProvider>
-          {children}
-          <Toaster position="top-center" />
+          <AuthProvider>
+            {children}
+            <Toaster position="top-center" richColors closeButton />
+          </AuthProvider>
         </ThemeProvider>
       </body>
     </html>

@@ -7,12 +7,18 @@ import { Logo } from "@/components/brand/logo";
 import { ThemeToggle } from "@/components/theme/theme-toggle";
 import { buttonVariants, Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
+import { homeForRole, useAuth } from "@/lib/auth/auth-provider";
 import { mainNav, routes } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
 export function SiteHeader() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const { user, profile, isAnonymous } = useAuth();
+  const signedIn = Boolean(user && profile && !isAnonymous);
+  const account = signedIn
+    ? { href: homeForRole(profile?.role), label: "Dashboard" }
+    : { href: routes.login, label: "Log In" };
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
@@ -47,8 +53,8 @@ export function SiteHeader() {
 
         <div className="ml-auto flex items-center gap-1.5">
           <ThemeToggle />
-          <Link href={routes.login} className={cn(buttonVariants({ variant: "ghost" }), "hidden sm:inline-flex")}>
-            Log In
+          <Link href={account.href} className={cn(buttonVariants({ variant: "ghost" }), "hidden sm:inline-flex")}>
+            {account.label}
           </Link>
           <Link href={routes.postProblem} className={cn(buttonVariants(), "hidden sm:inline-flex")}>
             Post Your Problem
@@ -74,8 +80,8 @@ export function SiteHeader() {
                 ))}
               </nav>
               <div className="mt-auto flex flex-col gap-2">
-                <Link href={routes.login} onClick={() => setOpen(false)} className={buttonVariants({ variant: "outline", size: "lg" })}>
-                  Log In
+                <Link href={account.href} onClick={() => setOpen(false)} className={buttonVariants({ variant: "outline", size: "lg" })}>
+                  {account.label}
                 </Link>
                 <Link href={routes.postProblem} onClick={() => setOpen(false)} className={buttonVariants({ size: "lg" })}>
                   Post Your Problem
