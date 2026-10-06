@@ -16,9 +16,9 @@ type Participants = { studentId: string; expertId: string | null; expertName?: s
 
 function senderLabel(m: ChatMessage, me: string, p: Participants) {
   if (m.sender_id === me) return "You";
-  if (m.sender_id === p.expertId) return p.expertName ?? "Expert";
+  if (m.sender_id === p.expertId) return p.expertName ?? "UniSolve";
   if (m.sender_id === p.studentId) return "Student";
-  return "UniSolve Support";
+  return "UniSolve";
 }
 
 async function openFile(path: string, name: string) {

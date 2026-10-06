@@ -25,7 +25,7 @@ export default function FilesPage() {
       ) : error ? (
         <ErrorState message={error} onRetry={reload} />
       ) : !data?.length ? (
-        <EmptyState icon={FolderLock} title="No files yet" description="Files you or your expert share will appear here." />
+        <EmptyState icon={FolderLock} title="No files yet" description="Files you or UniSolve share will appear here." />
       ) : (
         <div className="overflow-hidden rounded-2xl border bg-card">
           <ul className="divide-y">
@@ -36,7 +36,7 @@ export default function FilesPage() {
                   <p className="text-xs text-muted-foreground">
                     {formatBytes(f.size_bytes)} · {formatDate(f.created_at)} ·{" "}
                     {f.request && <Link href={`/dashboard/request?id=${f.request.code}`} className="hover:underline">#{f.request.code}</Link>}
-                    {f.uploader_id !== user?.id && " · from your expert"}
+                    {f.uploader_id !== user?.id && " · from UniSolve"}
                   </p>
                 </div>
                 <Button

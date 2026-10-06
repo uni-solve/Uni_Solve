@@ -6,23 +6,10 @@ import { EyeOff, FileX2, Loader2, ShieldCheck, Trash2, UserX } from "lucide-reac
 import { toast } from "sonner";
 import { PageHeader } from "@/components/app/states";
 import { Button, buttonVariants } from "@/components/ui/button";
-import { Switch } from "@/components/ui/switch";
-import { useAuth } from "@/lib/auth/auth-provider";
 import { createTicket } from "@/lib/data/support";
-import { must, useQuery } from "@/lib/hooks/use-query";
-import { friendlyError, getSupabase } from "@/lib/supabase/client";
-
-async function load(userId: string) {
-  const supabase = getSupabase();
-  const sp = must(await supabase.from("student_profiles").select("default_anonymous").eq("user_id", userId).maybeSingle()) as {
-    default_anonymous: boolean;
-  } | null;
-  return { defaultAnonymous: sp?.default_anonymous ?? true };
-}
+import { friendlyError } from "@/lib/supabase/client";
 
 export default function PrivacyPage() {
-  const { user } = useAuth();
-  const { data, reload } = useQuery(() => load(user!.id), [user?.id]);
   const [busy, setBusy] = useState<string | null>(null);
 
   async function request(kind: "export" | "delete") {
@@ -42,7 +29,7 @@ export default function PrivacyPage() {
   }
 
   const items = [
-    { icon: EyeOff, title: "Anonymous by default", body: "New requests hide your name from experts." },
+    { icon: EyeOff, title: "Minimal details", body: "Your college, student ID and full name are never required." },
     { icon: ShieldCheck, title: "Private files", body: "Files are stored privately and opened only via links that expire in minutes." },
     { icon: FileX2, title: "Delete anytime", body: "Remove files you uploaded at any time from Files or the request page." },
   ];
@@ -59,23 +46,6 @@ export default function PrivacyPage() {
               <p className="mt-1 text-xs text-muted-foreground">{body}</p>
             </div>
           ))}
-        </section>
-
-        <section className="rounded-2xl border bg-card p-6">
-          <label className="flex items-center justify-between gap-4">
-            <span>
-              <span className="block font-medium">Post new requests anonymously</span>
-              <span className="block text-sm text-muted-foreground">You can still change it per request.</span>
-            </span>
-            <Switch
-              checked={data?.defaultAnonymous ?? true}
-              onCheckedChange={async (v) => {
-                const { error } = await getSupabase().from("student_profiles").update({ default_anonymous: Boolean(v) }).eq("user_id", user!.id);
-                if (error) toast.error(friendlyError(error));
-                else reload();
-              }}
-            />
-          </label>
         </section>
 
         <section className="rounded-2xl border bg-card p-6">

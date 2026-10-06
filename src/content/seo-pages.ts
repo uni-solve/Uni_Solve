@@ -15,11 +15,11 @@ export const seoPages: SeoPage[] = [
     slug: "academic-help",
     metaTitle: "Academic Help for College & University Students",
     metaDescription:
-      "Private tutoring, concept explanations and assignment guidance from verified experts. Post your problem and get matched with the right tutor.",
+      "Private tutoring, concept explanations and assignment guidance. Post your problem and get personal help from the UniSolve team.",
     eyebrow: "Academic help",
     h1: "Academic help that helps you actually understand",
     intro:
-      "Stuck on a concept, a problem set or exam prep? Get one-on-one guidance from an expert who explains it until it clicks.",
+      "Stuck on a concept, a problem set or exam prep? Get one-on-one guidance that explains it until it clicks.",
     helpWith: ["Concept explanations", "Assignment guidance", "Problem-solving walkthroughs", "Exam preparation", "Tutoring sessions"],
     examples: ["“I don't understand Laplace transforms.”", "“Can someone explain normalization in DBMS?”", "“I need a study plan for my semester exams.”"],
     category: "academic",
@@ -93,7 +93,7 @@ export const seoPages: SeoPage[] = [
       "Prepare for your project or thesis viva with mock questions, presentation feedback and confidence-building practice sessions.",
     eyebrow: "Viva preparation",
     h1: "Walk into your viva prepared and confident",
-    intro: "Practise with an expert who asks the hard questions first — and helps you explain your own work clearly.",
+    intro: "Practise with someone who asks the hard questions first — and helps you explain your own work clearly.",
     helpWith: ["Mock viva sessions", "Likely question lists", "Presentation & slide feedback", "Explaining your methodology", "Handling tough questions"],
     examples: ["“What will examiners ask about my ML model?”", "“Review my final-year project slides.”", "“I freeze when I present.”"],
     category: "thesis",

@@ -12,7 +12,7 @@ import { friendlyError } from "@/lib/supabase/client";
 
 const reasons = [
   { value: "quality", label: "Quality of support" },
-  { value: "unresponsive", label: "Not responding" },
+  { value: "unresponsive", label: "No response" },
   { value: "deadline", label: "Missed deadline" },
   { value: "integrity", label: "Academic integrity concern" },
   { value: "payment", label: "Payment problem" },
@@ -48,7 +48,7 @@ export function ReportIssueDialog({ open, onOpenChange, requestId, onDone }: { o
       <DialogContent className="sm:max-w-md">
         <DialogHeader>
           <DialogTitle>Report an issue</DialogTitle>
-          <DialogDescription>A UniSolve team member reviews every report. Your expert isn&apos;t shown what you write here.</DialogDescription>
+          <DialogDescription>A UniSolve team member reviews every report.</DialogDescription>
         </DialogHeader>
         <fieldset className="grid gap-1.5">
           <legend className="mb-1.5 text-sm font-medium">What&apos;s wrong?</legend>

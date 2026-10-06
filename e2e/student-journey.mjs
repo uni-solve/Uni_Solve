@@ -28,21 +28,15 @@ try {
   await page.goto(`${BASE}/post/`, { waitUntil: "networkidle0" });
   step("wizard loaded");
   await clickText("Coding", "label");
-  await clickText("Continue");
-  await page.type("#title", "E2E test: Python KeyError in dict loop");
   await page.type("#description", "Automated end-to-end test. My Python script throws KeyError when iterating a pandas dataframe and updating a dict.");
-  await clickText("Continue");
-  await clickText("Skip");
+  await page.type("#amount-input", "600");
   await clickText("This week", "label");
-  await clickText("Continue");
-  await clickText("Continue"); // budget: let UniSolve suggest
-  await clickText("Continue"); // privacy defaults
-  await page.waitForFunction(() => document.body.innerText.includes("Estimated price"), { timeout: 20000 });
-  const rec = await page.evaluate(() => document.querySelector("section[aria-live]")?.innerText.replace(/\s+/g, " "));
-  step("recommendation: " + rec);
-  await page.screenshot({ path: `${SHOTS}/e2e-review.png`, fullPage: true });
-  await page.click('[role="checkbox"]');
-  await clickText("Submit request");
+  await page.waitForFunction(() => document.body.innerText.includes("Typical price"), { timeout: 20000 });
+  const rec = await page.evaluate(() => document.querySelector("aside[aria-live]")?.innerText.replace(/\s+/g, " "));
+  step("live estimate: " + rec);
+  await page.screenshot({ path: `${SHOTS}/e2e-form.png`, fullPage: true });
+  await page.click('#agree [role="checkbox"]');
+  await clickText("Send");
   await page.waitForFunction(() => document.body.innerText.includes("Your request has been created."), { timeout: 30000 });
   const code = await page.evaluate(() => document.body.innerText.match(/US-\d{5,6}/)?.[0]);
   step("created " + code);

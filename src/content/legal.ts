@@ -18,7 +18,7 @@ export const legalDocs: LegalDoc[] = [
       {
         heading: "Our position",
         body: [
-          "UniSolve is a platform for legitimate learning, mentoring, tutoring, technical assistance and academic support. Experts help you understand, plan, debug, review and prepare. The work you submit for assessment must be your own.",
+          "UniSolve is a platform for legitimate learning, mentoring, tutoring, technical assistance and academic support. We help you understand, plan, debug, review and prepare. The work you submit for assessment must be your own.",
           "Students are responsible for following the academic rules of their institution. If your institution restricts outside help for a specific task, you must not request it on UniSolve.",
         ],
       },
@@ -35,7 +35,7 @@ export const legalDocs: LegalDoc[] = [
         ],
       },
       {
-        heading: "What experts can do",
+        heading: "What we do",
         body: [
           "Explain concepts, walk through worked examples and recommend learning resources.",
           "Review your code, writing or methodology and give feedback you then apply yourself.",
@@ -46,7 +46,7 @@ export const legalDocs: LegalDoc[] = [
       {
         heading: "Enforcement",
         body: [
-          "Requests that breach this policy are declined. Accounts — student or expert — that repeatedly or seriously breach it are suspended or removed, and payments for prohibited work are not processed.",
+          "Requests that breach this policy are declined. Accounts that repeatedly or seriously breach it are suspended or removed, and payments for prohibited work are not processed.",
           "Report a suspected breach from any request using “Report Issue”, or through the Help Center.",
         ],
       },
@@ -63,7 +63,6 @@ export const legalDocs: LegalDoc[] = [
         body: [
           "Account data: email address, a display name you choose, and your password (stored only as a secure hash by our authentication provider).",
           "Request data: the problem you describe, files you upload, messages, deadlines, budget preferences and payment references.",
-          "Expert data: identity, education, experience and verification documents needed to approve experts.",
           "Technical data: basic logs required to keep the service secure. We do not sell personal data.",
         ],
       },
@@ -76,13 +75,13 @@ export const legalDocs: LegalDoc[] = [
       {
         heading: "How we use it",
         body: [
-          "To match your request with a suitable expert, deliver the support, process payments, prevent fraud and abuse, provide customer support and send notifications about your requests.",
+          "To understand your request, deliver the support, process payments, prevent fraud and abuse, provide customer support and send notifications about your requests.",
         ],
       },
       {
         heading: "Who can see your data",
         body: [
-          "Your request and files are visible only to you, the expert assigned to your request, and authorised UniSolve staff where necessary to run the service or resolve a dispute. Experts do not see your phone number or email by default.",
+          "Your request and files are visible only to you and the UniSolve team members handling it. Your phone number and email are never shared with anyone outside UniSolve.",
           "Files are kept in private storage and are accessed only through short-lived, authorised links.",
         ],
       },
@@ -115,7 +114,7 @@ export const legalDocs: LegalDoc[] = [
       {
         heading: "The service",
         body: [
-          "UniSolve connects students with independent, verified experts for learning, mentoring and technical support. UniSolve facilitates the engagement, communication and payment.",
+          "UniSolve provides learning, mentoring and technical support to students. Requests are handled by the UniSolve team through the platform's private chat.",
         ],
       },
       {
@@ -143,7 +142,7 @@ export const legalDocs: LegalDoc[] = [
       {
         heading: "Limitation of liability",
         body: [
-          "Expert support is guidance. Outcomes such as grades, publication or hiring decisions depend on many factors outside our control and are not guaranteed. To the extent permitted by law, UniSolve's liability is limited to the amount you paid for the affected request.",
+          "Our support is guidance. Outcomes such as grades, publication or hiring decisions depend on many factors outside our control and are not guaranteed. To the extent permitted by law, UniSolve's liability is limited to the amount you paid for the affected request.",
         ],
       },
       {
@@ -164,12 +163,12 @@ export const legalDocs: LegalDoc[] = [
     sections: [
       {
         heading: "Before work starts",
-        body: ["If no expert has started work on your request, you can cancel and receive a full refund of any amount paid."],
+        body: ["If work hasn't started on your request, you can cancel and receive a full refund of any amount paid."],
       },
       {
         heading: "After work starts",
         body: [
-          "For milestone-based requests, completed and approved milestones are non-refundable. Unstarted milestones are refundable.",
+          "Once work has started, the 50% advance covers work already done and is refunded only if the support isn't delivered as agreed.",
           "If the agreed support was not delivered, or was materially different from what was agreed, raise a dispute from the request page. UniSolve staff review the conversation and files and may issue a full or partial refund.",
         ],
       },
@@ -181,44 +180,6 @@ export const legalDocs: LegalDoc[] = [
         heading: "How refunds are paid",
         body: [
           "Approved refunds are returned to the original UPI account, normally within 5–7 working days of approval, or issued as UniSolve credit if you prefer.",
-        ],
-      },
-    ],
-  },
-  {
-    slug: "expert-agreement",
-    title: "Expert Agreement",
-    summary: "The standards every UniSolve expert agrees to.",
-    updated: UPDATED,
-    sections: [
-      {
-        heading: "Verification",
-        body: [
-          "Experts must verify their real identity and qualifications with UniSolve. You may use a professional display name with students, but UniSolve must know who you are. Only approved experts may accept paid work.",
-        ],
-      },
-      {
-        heading: "Integrity",
-        body: [
-          "You must follow the Academic Integrity Policy. You must decline requests to complete graded work for submission, fabricate data or citations, impersonate students, or assist during exams — and report such requests.",
-        ],
-      },
-      {
-        heading: "Confidentiality",
-        body: [
-          "Student files and messages are confidential. Do not download them for any other purpose, share them, reuse them, or contact students outside the platform.",
-        ],
-      },
-      {
-        heading: "Payments and commission",
-        body: [
-          "Experts are paid for completed, approved work, less the platform commission shown in your dashboard. Payouts are made to your verified payout account.",
-        ],
-      },
-      {
-        heading: "Quality and conduct",
-        body: [
-          "Respond within your stated response time, communicate respectfully, meet agreed milestones and deadlines, and flag problems early. Repeated low ratings or misconduct may lead to suspension.",
         ],
       },
     ],
@@ -244,12 +205,12 @@ export const legalDocs: LegalDoc[] = [
       {
         heading: "Use help to learn",
         body: [
-          "Use explanations, reviews and feedback to improve your own work. Do not ask experts to produce work you will submit as your own, or to help during an exam.",
+          "Use explanations, reviews and feedback to improve your own work. Do not ask us to produce work you will submit as your own, or to help during an exam.",
         ],
       },
       {
         heading: "Be respectful",
-        body: ["Harassment, abusive language or attempts to obtain an expert's personal details are not allowed."],
+        body: ["Harassment, abusive language or attempts to obtain staff members' personal details are not allowed."],
       },
     ],
   },

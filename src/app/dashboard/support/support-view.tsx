@@ -174,7 +174,7 @@ export function SupportView() {
       ) : error ? (
         <ErrorState message={error} onRetry={reload} />
       ) : !data?.length ? (
-        <EmptyState icon={LifeBuoy} title="No tickets" description="Payment, expert, refund or technical problem? We're here to help." action={<Button onClick={() => setCreating(true)}>Raise a ticket</Button>} />
+        <EmptyState icon={LifeBuoy} title="No tickets" description="Payment, request, refund or technical problem? We're here to help." action={<Button onClick={() => setCreating(true)}>Raise a ticket</Button>} />
       ) : (
         <ul className="divide-y rounded-2xl border bg-card">
           {data.map((t) => (

@@ -11,7 +11,7 @@ export const pricingPlans: PricingPlan[] = [
     name: "Quick Help",
     from: 199,
     description: "A focused session for one concept, bug or question.",
-    includes: ["Single topic or issue", "Chat with an expert", "Same-day options"],
+    includes: ["Single topic or issue", "Private chat support", "Same-day options"],
   },
   {
     name: "Career Support",
@@ -23,7 +23,7 @@ export const pricingPlans: PricingPlan[] = [
     name: "Project Support",
     from: 999,
     description: "Mentorship across planning, building, testing and demo.",
-    includes: ["Architecture guidance", "Debugging sessions", "Milestone payments"],
+    includes: ["Architecture guidance", "Debugging sessions", "Pay 50% to start"],
     featured: true,
   },
   {

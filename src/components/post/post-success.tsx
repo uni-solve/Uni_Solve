@@ -35,10 +35,10 @@ function CopyButton({ value, label }: { value: string; label: string }) {
 }
 
 const nextSteps = [
-  "We review your requirements (usually within a few hours).",
-  "You receive a confirmed quote and timeline.",
-  "You pay securely by UPI — milestones for larger work.",
-  "A verified expert is assigned and you work together privately.",
+  "We review your request and accept your amount or send a quote.",
+  "You pay 50% by UPI to get started.",
+  "We work on it and keep you updated in your private chat.",
+  "You pay the remaining 50% on delivery and mark it complete.",
 ];
 
 export function PostSuccess({ request, uploads }: { request: CreatedRequest; uploads: { ok: number; failed: string[] } }) {

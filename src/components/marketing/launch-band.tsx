@@ -5,7 +5,7 @@ import { routes } from "@/lib/site";
 
 /**
  * Honest social proof for launch. Once real platform metrics exist (students helped,
- * requests completed, verified experts, average rating) this band renders them from
+ * requests completed, average rating) this band renders them from
  * the database instead — numbers are never hard-coded.
  */
 export function LaunchBand() {
@@ -27,8 +27,8 @@ export function LaunchBand() {
           <Link href={routes.signup} className={buttonVariants({ variant: "navy" })}>
             Join as a student
           </Link>
-          <Link href={routes.becomeExpert} className={buttonVariants({ variant: "outline" })}>
-            Become an expert
+          <Link href={routes.postProblem} className={buttonVariants({ variant: "outline" })}>
+            Post Your Problem
           </Link>
         </div>
       </div>

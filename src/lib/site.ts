@@ -18,7 +18,6 @@ export const mainNav = [
   { label: "How It Works", href: "/#how-it-works" },
   { label: "Services", href: "/services" },
   { label: "For Students", href: "/for-students" },
-  { label: "For Experts", href: "/for-experts" },
   { label: "Pricing", href: "/pricing" },
   { label: "FAQ", href: "/#faq" },
 ] as const;
@@ -32,7 +31,6 @@ export const routes = {
   requests: "/dashboard/requests",
   messages: "/dashboard/messages",
   profile: "/dashboard/profile",
-  becomeExpert: "/become-an-expert",
 } as const;
 
 export const footerNav = [
@@ -42,7 +40,7 @@ export const footerNav = [
       { label: "How It Works", href: "/#how-it-works" },
       { label: "Services", href: "/services" },
       { label: "Pricing", href: "/pricing" },
-      { label: "Become an Expert", href: "/become-an-expert" },
+      { label: "Track a Request", href: "/track" },
       { label: "FAQ", href: "/#faq" },
     ],
   },
@@ -61,7 +59,7 @@ export const footerNav = [
       { label: "Privacy", href: "/legal/privacy-policy" },
       { label: "Terms", href: "/legal/terms-of-service" },
       { label: "Academic Integrity", href: "/legal/academic-integrity" },
-      { label: "Expert Agreement", href: "/legal/expert-agreement" },
+      { label: "Student Guidelines", href: "/legal/student-guidelines" },
     ],
   },
 ] as const;

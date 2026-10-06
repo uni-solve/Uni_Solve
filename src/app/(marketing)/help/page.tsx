@@ -5,13 +5,13 @@ import { SectionHeading } from "@/components/marketing/section-heading";
 
 export const metadata: Metadata = {
   title: "Help Center",
-  description: "Get help with payments, experts, refunds or technical problems. Raise a support ticket and track it by ID.",
+  description: "Get help with payments, requests, refunds or technical problems. Raise a support ticket and track it by ID.",
   alternates: { canonical: "/help/" },
 };
 
 const topics = [
   { icon: CreditCard, title: "Payment issue", body: "Payment not verified, wrong amount or a UPI problem." },
-  { icon: UserX, title: "Expert issue", body: "Unresponsive expert, quality concerns or misconduct." },
+  { icon: UserX, title: "Request issue", body: "Delays, quality concerns or anything about your request." },
   { icon: RotateCcw, title: "Refund", body: "Request a refund under our Refund Policy." },
   { icon: Wrench, title: "Technical problem", body: "Uploads failing, login trouble or something broken." },
   { icon: HelpCircle, title: "Other", body: "Anything else we can help you with." },

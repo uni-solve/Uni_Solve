@@ -13,8 +13,8 @@ export const metadata: Metadata = {
 
 const details = [
   { q: "How is my price calculated?", a: "We look at the complexity, scope and deadline of your request. You receive a quote with the full price before paying." },
-  { q: "What are milestone payments?", a: "Larger projects are split into stages — for example 30% to start, 40% at a milestone and 30% on completion — so you pay as work progresses." },
-  { q: "How do I pay?", a: "By UPI. Scan the QR code, enter your transaction reference, and our team verifies the payment before work begins." },
+  { q: "How do payments work?", a: "Every request is paid in two parts: 50% in advance to start, and the remaining 50% when your solution is delivered." },
+  { q: "How do I pay?", a: "By UPI. Scan the QR code, enter your transaction reference (UTR), and our team verifies the payment." },
   { q: "Are there discounts?", a: "Look out for launch coupons, and refer friends to earn UniSolve credit." },
 ];
 

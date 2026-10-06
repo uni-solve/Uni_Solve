@@ -15,7 +15,7 @@ export type Ticket = {
 export const ticketTopics = [
   { value: "chat", label: "Chat with support" },
   { value: "payment", label: "Payment issue" },
-  { value: "expert", label: "Expert issue" },
+  { value: "expert", label: "Request issue" },
   { value: "refund", label: "Refund" },
   { value: "technical", label: "Technical problem" },
   { value: "other", label: "Other" },

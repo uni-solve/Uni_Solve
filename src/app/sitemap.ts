@@ -13,8 +13,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/services/",
     "/pricing/",
     "/for-students/",
-    "/for-experts/",
-    "/become-an-expert/",
     "/help/",
     "/contact/",
     ...seoPages.map((p) => `/${p.slug}/`),

@@ -117,7 +117,7 @@ export default function ProfilePage() {
           )}
         </Section>
 
-        <Section title="About you" description="Your display name is shown to experts only on non-anonymous requests.">
+        <Section title="About you" description="How we should address you in chats and emails.">
           <form
             className="grid max-w-md gap-4"
             onSubmit={(e) => {
@@ -133,10 +133,10 @@ export default function ProfilePage() {
             <FormField id="name" label="Display name" optional>
               {(aria) => <Input {...aria} value={name} maxLength={60} onChange={(e) => setName(e.target.value)} />}
             </FormField>
-            <FormField id="phone" label="Phone" optional hint="Only used by UniSolve support. Never shown to experts.">
+            <FormField id="phone" label="Phone" optional hint="Only used by UniSolve if we need to reach you. Never shared.">
               {(aria) => <Input {...aria} type="tel" value={phone} onChange={(e) => setPhone(e.target.value)} placeholder="+91" />}
             </FormField>
-            <FormField id="institution" label="College / university" optional hint="Helps us match context. Never shown to experts.">
+            <FormField id="institution" label="College / university" optional hint="Helps us understand your syllabus. Never shared.">
               {(aria) => <Input {...aria} value={institution} onChange={(e) => setInstitution(e.target.value)} />}
             </FormField>
             <Button type="submit" className="w-fit" disabled={saving === "profile"}>{saving === "profile" && <Loader2 className="animate-spin" />} Save</Button>

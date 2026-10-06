@@ -37,32 +37,8 @@ export const categoryToWorkType: Record<string, WorkType> = {
 };
 
 export type DeadlineOption = "today" | "tomorrow" | "2_3_days" | "this_week" | "none" | "custom";
-export const deadlineOptions: { value: DeadlineOption; label: string }[] = [
-  { value: "today", label: "Today" },
-  { value: "tomorrow", label: "Tomorrow" },
-  { value: "2_3_days", label: "2–3 days" },
-  { value: "this_week", label: "This week" },
-  { value: "none", label: "No specific deadline" },
-  { value: "custom", label: "Pick a date" },
-];
-
 export type BudgetOption = "suggest" | "500_1000" | "1000_2500" | "2500_5000" | "5000_plus" | "custom";
-export const budgetOptions: { value: BudgetOption; label: string; hint?: string }[] = [
-  { value: "suggest", label: "Let UniSolve suggest", hint: "Recommended" },
-  { value: "500_1000", label: "₹500 – ₹1,000" },
-  { value: "1000_2500", label: "₹1,000 – ₹2,500" },
-  { value: "2500_5000", label: "₹2,500 – ₹5,000" },
-  { value: "5000_plus", label: "₹5,000+" },
-  { value: "custom", label: "Custom amount" },
-];
-
 export type ContactPreference = "in_app" | "email" | "whatsapp";
-export const contactOptions: { value: ContactPreference; label: string; hint: string }[] = [
-  { value: "in_app", label: "In-app messages only", hint: "Most private — nothing leaves UniSolve" },
-  { value: "email", label: "Email updates", hint: "We email you when something changes" },
-  { value: "whatsapp", label: "WhatsApp updates", hint: "Coming soon — we'll use email until then" },
-];
-
 // ---------------------------------------------------------------------------
 // Files: PDF, DOCX, PPTX, XLSX, ZIP, images and code. Mirrors the storage
 // bucket's MIME allowlist; the database enforces it again on upload.

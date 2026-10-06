@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { useState } from "react";
-import { ArrowLeft, Clock, Eye, EyeOff, KeyRound, LifeBuoy, Loader2, Star, Tag, X } from "lucide-react";
+import { ArrowLeft, Clock, Eye, KeyRound, LifeBuoy, Loader2, Star, Tag, X } from "lucide-react";
 import { toast } from "sonner";
 import { ChatPanel } from "@/components/chat/chat-panel";
 import { ErrorState, ListSkeleton } from "@/components/app/states";
@@ -114,7 +114,6 @@ export function RequestView() {
           <div className="flex flex-wrap items-center gap-2">
             <span className="font-mono text-sm text-muted-foreground">REQUEST #{r.code}</span>
             <StatusBadge tone={meta.tone} pulse={meta.live}>{meta.label}</StatusBadge>
-            {r.is_anonymous && <Badge variant="muted"><EyeOff /> Anonymous</Badge>}
           </div>
           <h1 className="mt-2 text-2xl font-semibold">{r.title}</h1>
           <div className="mt-2 flex flex-wrap gap-1.5">
@@ -141,7 +140,7 @@ export function RequestView() {
             <section className="rounded-2xl border border-info/30 bg-info-soft/50 p-5">
               <p className="flex items-center gap-2 font-medium"><Clock className="size-4 text-info" aria-hidden /> We&apos;re reviewing your requirements</p>
               <p className="mt-1 text-sm text-muted-foreground">
-                You&apos;ll get a confirmed quote here and a notification. Estimated {r.estimate_min && r.estimate_max ? `${formatINR(r.estimate_min)} – ${formatINR(r.estimate_max)}` : "price on review"}.
+                We&apos;ll accept your amount or send a quote here, with a notification. Estimated {r.estimate_min && r.estimate_max ? `${formatINR(r.estimate_min)} – ${formatINR(r.estimate_max)}` : "price on review"}.
               </p>
             </section>
           ) : null}
@@ -154,7 +153,7 @@ export function RequestView() {
                 {r.discount_amount > 0 && <p className="text-sm text-muted-foreground line-through">{formatINR(r.quoted_price!)}</p>}
               </div>
               <p className="mt-1 text-sm text-muted-foreground">
-                {milestones.length > 1 ? `Paid in ${milestones.length} milestones — you only pay as work progresses.` : "Single payment."} No hidden charges.
+                {milestones.length > 1 ? `Pay ${formatINR(milestones[0].amount)} now to start, and the rest on delivery.` : "Single payment."} No hidden charges.
               </p>
               <div className="mt-4 flex flex-col gap-2 sm:flex-row sm:items-center">
                 {r.coupon_id ? (
@@ -173,8 +172,8 @@ export function RequestView() {
             </section>
           )}
 
-          {milestones.length > 0 && (
-            <MilestonesCard milestones={milestones} payments={payments} canPay={!closed && r.status !== "disputed"} onPay={setPaying} onChange={reload} />
+          {milestones.length > 0 && r.status !== "cancelled" && (
+            <MilestonesCard requestId={r.id} status={r.status} milestones={milestones} payments={payments} onPay={setPaying} onChange={reload} />
           )}
 
           {r.status === "completed" && !review && <ReviewForm requestId={r.id} onDone={reload} />}
@@ -210,20 +209,11 @@ export function RequestView() {
 
           <section className="rounded-2xl border bg-card px-5 py-3">
             <dl className="divide-y">
-              <Row label="Assigned expert">
-                {r.expert ? (
-                  <span>
-                    {r.expert.display_name}
-                    {r.expert.rating_count > 0 && <span className="block text-xs font-normal text-muted-foreground">★ {Number(r.expert.rating_avg).toFixed(1)} · {r.expert.completed_count} completed</span>}
-                  </span>
-                ) : (
-                  <span className="text-muted-foreground">Matching…</span>
-                )}
-              </Row>
+              <Row label="Handled by">UniSolve team</Row>
               <Row label="Price">{total != null ? formatINR(total) : <span className="text-muted-foreground">Quote pending</span>}</Row>
               <Row label="Deadline">{r.deadline_at ? formatDate(r.deadline_at, true) : "Flexible"}</Row>
               <Row label="Payment">
-                {milestones.length === 0 ? "—" : `${milestones.filter((m) => m.status !== "pending").length}/${milestones.length} paid`}
+                {milestones.length === 0 ? "—" : `${milestones.filter((m) => m.status !== "pending").length} of ${milestones.length} paid`}
               </Row>
               <Row label="Submitted">{formatDate(r.submitted_at)}</Row>
             </dl>

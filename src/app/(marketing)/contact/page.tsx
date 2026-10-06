@@ -19,7 +19,7 @@ export default function ContactPage() {
         <div className="rounded-2xl border bg-card p-6">
           <LifeBuoy className="size-5 text-brand" aria-hidden />
           <h2 className="mt-4 font-semibold">Support tickets</h2>
-          <p className="mt-1.5 text-sm text-muted-foreground">Payments, experts, refunds or technical issues.</p>
+          <p className="mt-1.5 text-sm text-muted-foreground">Payments, requests, refunds or technical issues.</p>
           <Link href="/help" className={`${buttonVariants({ variant: "outline" })} mt-5`}>
             Open Help Center
           </Link>

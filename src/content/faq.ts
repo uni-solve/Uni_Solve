@@ -4,12 +4,12 @@ export const faqs = [
     a: "Tutoring, concept explanations, coding and debugging help, project mentorship, research and thesis guidance, proofreading, documentation and presentation support, viva preparation, and career preparation. You don't need to know which service you need — just describe your problem.",
   },
   {
-    q: "Will an expert do my assignment or thesis for me?",
-    a: "No. UniSolve is a learning and mentoring platform. Experts guide, explain, review and help you debug — the work you submit must be your own. We prohibit plagiarism, fabricated results, fake citations, impersonation and exam cheating. See our Academic Integrity Policy.",
+    q: "Will you do my assignment or thesis for me?",
+    a: "No. UniSolve is a learning and support service. We guide, explain, review and help you debug — the work you submit must be your own. We prohibit plagiarism, fabricated results, fake citations, impersonation and exam cheating. See our Academic Integrity Policy.",
   },
   {
     q: "Do I have to share my name or college?",
-    a: "No. You can post a request privately and track it with your UniSolve Request ID. We only ask for information needed to deliver the support, and experts never see your phone number by default.",
+    a: "No. You can post a request privately and track it with your UniSolve Request ID. We only ask for information needed to deliver the support, and your details are never shared with anyone outside UniSolve.",
   },
   {
     q: "How is the price decided?",
@@ -17,11 +17,11 @@ export const faqs = [
   },
   {
     q: "How do I pay?",
-    a: "You pay by UPI. Your payment is verified by our team before work begins. Larger projects can be split into milestone payments, so you only pay as work progresses.",
+    a: "You pay by UPI: 50% in advance to start, and the remaining 50% when your solution is delivered. Every payment is verified by our team.",
   },
   {
-    q: "Who are the experts?",
-    a: "Experts apply, submit their education and experience, and verify their identity with us. Only approved experts can accept paid work. Some may use a professional display name on the platform.",
+    q: "Who will help me?",
+    a: "Every request is handled personally by the UniSolve team — the same people you chat with on your request page. No middlemen, no forwarding your files to strangers.",
   },
   {
     q: "What if something goes wrong?",

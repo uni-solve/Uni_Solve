@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { CheckCircle2, Inbox, Plus, Users, Wallet } from "lucide-react";
+import { CheckCircle2, Gift, Inbox, Plus, Wallet } from "lucide-react";
 import { EmptyState, ErrorState, ListSkeleton, PageHeader, StatCard } from "@/components/app/states";
 import { GuestBanner } from "@/components/student/guest-banner";
 import { RequestCard } from "@/components/student/request-card";
@@ -34,7 +34,7 @@ export default function StudentOverviewPage() {
         <StatCard label="Active Requests" value={overview.data?.active ?? 0} icon={Inbox} loading={overview.loading} />
         <StatCard label="Completed" value={overview.data?.completed ?? 0} icon={CheckCircle2} loading={overview.loading} />
         <StatCard label="Pending Payment" value={formatINR(overview.data?.pending_payment ?? 0)} icon={Wallet} loading={overview.loading} />
-        <StatCard label="Saved Experts" value={overview.data?.saved_experts ?? 0} icon={Users} loading={overview.loading} />
+        <StatCard label="UniSolve Credit" value={formatINR(overview.data?.credit ?? 0)} icon={Gift} loading={overview.loading} hint="Earn more by referring friends" />
       </div>
       {overview.data && overview.data.credit > 0 && (
         <p className="mt-3 text-sm text-muted-foreground">
@@ -55,7 +55,7 @@ export default function StudentOverviewPage() {
           <EmptyState
             icon={Inbox}
             title="No active requests"
-            description="Stuck on something? Describe it and we'll find the right expert."
+            description="Stuck on something? Describe it and we'll take it from there."
             action={<Link href="/post" className={buttonVariants()}>Post Your Problem</Link>}
           />
         ) : (

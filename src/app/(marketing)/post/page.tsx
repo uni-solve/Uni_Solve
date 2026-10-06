@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
-import { PostProblemWizard } from "@/components/post/post-problem-wizard";
+import { PostProblemForm } from "@/components/post/post-problem-form";
 
 export const metadata: Metadata = {
   title: "Post Your Problem",
@@ -10,9 +10,9 @@ export const metadata: Metadata = {
 
 export default function PostPage() {
   return (
-    <div className="container-page py-10 sm:py-14">
+    <div className="container-page max-w-6xl py-10 sm:py-14">
       <Suspense>
-        <PostProblemWizard />
+        <PostProblemForm />
       </Suspense>
     </div>
   );

@@ -2,7 +2,17 @@
 
 **Your Problem. Our Expertise.**
 
-UniSolve is a private academic, technical, project, research and career-support platform for university and college students. Students post a problem; UniSolve routes it to a verified expert who provides legitimate guidance, tutoring, debugging, mentorship and preparation.
+UniSolve is a private academic, technical, project, research and career-support platform for university and college students. Students post a problem with their files, budget and deadline; the UniSolve team responds from the admin dashboard.
+
+## How it works (solo mode)
+
+1. Student posts a problem (one-page form, guest or signed in) → gets a `US-xxxxx` Request ID.
+2. Admin accepts the student's budget or sends a quote → split into **50% advance / 50% on delivery**.
+3. Student pays the advance by UPI and submits the UTR → admin verifies → request moves to *In progress*.
+4. Admin works on it, shares files in the private chat, and marks it *Delivered*.
+5. Student pays the balance → admin verifies → student marks it *Complete* (or requests changes) → leaves a review.
+
+Expert-marketplace tables and functions exist in the schema but are dormant (`platform_settings.solo_mode = true`).
 
 ## Stack
 
@@ -15,6 +25,23 @@ UniSolve is a private academic, technical, project, research and career-support 
 | Payments | Manual UPI (QR + UTR verification by admin); provider interface ready for Razorpay/Stripe |
 
 Because the site is a static export, all authorization is enforced in the database with Row-Level Security — the frontend never holds privileged keys.
+
+## Testing
+
+```bash
+npm run test:db    # 60 RLS + workflow tests against PGlite (no Docker needed)
+npm run test:e2e   # browser journey against a local preview (see e2e/student-journey.mjs)
+```
+
+## Database
+
+Migrations live in `supabase/migrations`. To apply them to the linked project:
+
+```bash
+npx supabase db push --project-ref <ref>
+```
+
+Promote the first admin (SQL editor): `update public.profiles set role = 'admin' where id = (select id from auth.users where email = 'you@example.com');`
 
 ## Local development
 

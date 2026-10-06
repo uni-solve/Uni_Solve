@@ -176,3 +176,13 @@ export async function listMyPayments(userId: string) {
       .order("created_at", { ascending: false }),
   ) as unknown as (Payment & { request: { code: string; title: string } | null; milestone: { title: string } | null })[];
 }
+
+/** Solo mode: close the request once delivered and fully paid. */
+export async function completeRequest(requestId: string) {
+  must(await getSupabase().rpc("complete_request", { p_request: requestId }));
+}
+
+/** Solo mode: send a delivered request back for changes. */
+export async function requestChanges(requestId: string, note: string) {
+  must(await getSupabase().rpc("student_request_changes", { p_request: requestId, p_note: note }));
+}

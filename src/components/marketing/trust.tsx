@@ -4,9 +4,9 @@ import { SectionHeading } from "./section-heading";
 
 // Each claim maps to a feature the platform actually implements.
 const pillars = [
-  { icon: Lock, title: "Private by Design", body: "Your requests and files are handled privately — stored in private storage, shared only with your assigned expert." },
-  { icon: BadgeCheck, title: "Verified Experts", body: "Experts are reviewed and identity-verified before they can accept paid work." },
-  { icon: CreditCard, title: "Secure Payments", body: "Pay by UPI; every payment is verified before work starts, with milestones for larger projects." },
+  { icon: Lock, title: "Private by Design", body: "Your requests and files are handled privately — stored in private storage, seen only by the team handling your request." },
+  { icon: BadgeCheck, title: "Handled Personally", body: "Your request is handled directly by the UniSolve team — never passed on to strangers." },
+  { icon: CreditCard, title: "Secure Payments", body: "Pay by UPI — 50% to start, 50% on delivery. Every payment is verified by our team." },
   { icon: Activity, title: "Transparent Progress", body: "Track your request from submission to completion with a clear timeline." },
   { icon: LifeBuoy, title: "Human Support", body: "Raise a ticket or report an issue from any request when something goes wrong." },
   { icon: ReceiptText, title: "No Hidden Charges", body: "You see the full price before you pay. Nothing is added later." },

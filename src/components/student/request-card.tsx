@@ -18,7 +18,6 @@ export function RequestCard({ r, href }: { r: RequestSummary; href: string }) {
         <p className="mt-1.5 truncate font-medium">{r.title}</p>
         <p className="mt-1 flex flex-wrap gap-x-3 gap-y-1 text-xs text-muted-foreground">
           <span>{r.category?.name}</span>
-          {r.expert && <span>Expert: {r.expert.display_name}</span>}
           {r.deadline_at && <span>Due {formatDate(r.deadline_at)}</span>}
           {price && <span>{price}</span>}
         </p>

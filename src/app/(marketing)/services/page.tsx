@@ -22,7 +22,7 @@ export default function ServicesPage() {
           as="h1"
           eyebrow="Services"
           title="Support for every kind of student problem"
-          description="Not sure which one you need? You don't have to be. Post your problem and we'll route it to the right expert."
+          description="Not sure which one you need? You don't have to be. Post your problem and we'll take it from there."
         />
         <nav aria-label="Service categories" className="mt-10 flex flex-wrap justify-center gap-2">
           {serviceCategories.map((c) => (

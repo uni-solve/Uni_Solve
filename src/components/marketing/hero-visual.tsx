@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/badge";
 const timeline = [
   { label: "Request submitted", done: true },
   { label: "Requirements reviewed", done: true },
-  { label: "Expert assigned", done: true },
+  { label: "Payment confirmed", done: true },
   { label: "In progress", current: true },
   { label: "Review" },
   { label: "Completed" },
@@ -78,7 +78,7 @@ export function HeroVisual() {
 
           {/* Chat card */}
           <div className="flex flex-col rounded-xl border bg-background p-4">
-            <p className="text-xs font-medium text-muted-foreground">Private chat · Expert</p>
+            <p className="text-xs font-medium text-muted-foreground">Private chat · UniSolve</p>
             <div className="mt-3 flex-1 space-y-2 text-xs">
               <div className="w-fit max-w-[90%] rounded-lg rounded-tl-sm bg-muted px-3 py-2">
                 Your loss plateaus because the learning rate is too high for this batch size.

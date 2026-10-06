@@ -3,8 +3,8 @@ import { SectionHeading } from "./section-heading";
 
 const steps = [
   { n: "01", title: "Tell Us", body: "Describe what you're working on and where you're stuck." },
-  { n: "02", title: "Get Matched", body: "UniSolve identifies the appropriate category and expert." },
-  { n: "03", title: "Work Together", body: "Communicate privately, share files and track progress." },
+  { n: "02", title: "Get a Price", body: "Tell us your budget — we accept it or send a fair quote." },
+  { n: "03", title: "Work Together", body: "Pay 50% to start, chat privately, share files and track progress." },
   { n: "04", title: "Solve It", body: "Receive guidance, technical support, revisions and preparation." },
 ];
 
