@@ -11,7 +11,7 @@
     "test:e2e": "node e2e/student-journey.mjs",
     "test:e2e:full": "node e2e/full-journey.mjs",
     "test:qa": "node e2e/qa-sweep.mjs",
-    "test:security": "node --env-file=.env.local e2e/security-check.cjs"
+    "test:security": "node --env-file=.env.local e2e/security-check.mjs"
   },
   "dependencies": {
     "@base-ui/react": "^1.8.0",

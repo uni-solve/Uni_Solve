@@ -1,8 +1,8 @@
-// Usage: node --env-file=.env.local e2e/security-check.cjs
+// Usage: node --env-file=.env.local e2e/security-check.mjs
 // Leaves one empty guest account behind (printed as GUEST_ID).
 // Adversarial checks against the LIVE Supabase project, using only the public key
 // an attacker can read from the website's JavaScript.
-const { createClient } = require("@supabase/supabase-js");
+import { createClient } from "@supabase/supabase-js";
 const URL_ = process.env.NEXT_PUBLIC_SUPABASE_URL;
 const KEY = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 if (!URL_ || !KEY) throw new Error("Load .env.local first (NEXT_PUBLIC_SUPABASE_URL / _ANON_KEY)");
@@ -10,7 +10,8 @@ if (!URL_ || !KEY) throw new Error("Load .env.local first (NEXT_PUBLIC_SUPABASE_
 let pass = 0, fail = 0;
 const blocked = (name, res) => {
   const ok = Boolean(res.error) || (Array.isArray(res.data) && res.data.length === 0) || res.data === null || res.count === 0;
-  ok ? pass++ : fail++;
+  if (ok) pass++;
+  else fail++;
   console.log(ok ? "  BLOCKED" : "  !!! LEAK", name, ok ? `(${(res.error?.message ?? "no rows").slice(0, 60)})` : JSON.stringify(res.data).slice(0, 160));
 };
 
